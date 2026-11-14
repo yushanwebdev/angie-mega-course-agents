@@ -1,6 +1,6 @@
 # Evaluations
 
-`npm run eval` checks a Chapter 1 order lookup and verifies that its trace was saved. It calls OpenAI and resets the fictional store first.
+`npm run eval` checks a Chapter 1 order lookup and verifies that its trace was saved. It calls OpenRouter and resets the fictional store first.
 
 Run `npm test` for offline checks of order ownership, preference persistence, customer isolation, and resets. These checks also verify that automatic working-memory tools are disabled.
 

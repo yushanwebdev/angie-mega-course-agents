@@ -33,7 +33,7 @@ npm install --global npm@10.9.9
 npm ci
 ```
 
-Create `.env.local` from `.env.example` only if you don't already have one. Set your own `OPENAI_API_KEY` there. A supplied environment variable also works, including a Codespaces secret. Never share your key.
+Create `.env.local` from `.env.example` only if you don't already have one. Set your own `OPENROUTER_API_KEY` there. A supplied environment variable also works, including a Codespaces secret. Never share your key.
 
 ```bash
 npm run seed
@@ -78,7 +78,7 @@ Follow [Chapter 1: Agentic Primitives](docs/chapter-1.md) for the instruction, m
 
 ## Codespaces
 
-The dev container pins Node and npm, installs locked dependencies, seeds the store, and runs offline checks. Add your own `OPENAI_API_KEY` as a Codespaces secret scoped to this repository, then restart the Codespace if necessary. Run `npm run dev` yourself and open the private forwarded port 4111.
+The dev container pins Node and npm, installs locked dependencies, seeds the store, and runs offline checks. Add your own `OPENROUTER_API_KEY` as a Codespaces secret scoped to this repository, then restart the Codespace if necessary. Run `npm run dev` yourself and open the private forwarded port 4111.
 
 Container support is configured but not yet verified in a fresh Codespace.
 
@@ -93,9 +93,9 @@ Container support is configured but not yet verified in a fresh Codespace.
 
 ## Configuration and costs
 
-`.env.example` documents model IDs, database paths, customer identity, and future service URLs. Defaults use `openai/gpt-6-luna` for the smaller model and `openai/gpt-6-sol` for the more capable model.
+`.env.example` documents model IDs, database paths, customer identity, and future service URLs. Defaults use `openrouter/openai/gpt-6-luna` for the smaller model and `openrouter/openai/gpt-6-sol` for the more capable model.
 
-Agent requests and live evaluations bill your OpenAI API account. Offline checks don't call a provider. Live commands report token usage in their output or saved results. Check your provider usage dashboard for actual charges.
+Agent requests and live evaluations bill your OpenRouter account. Offline checks don't call a provider. Live commands report token usage in their output or saved results. Check your provider usage dashboard for actual charges.
 
 Orders and explicitly saved preferences live in `data/store.db`; conversation history and traces live in `data/agent.db`. `CUSTOMER_ID` selects the customer for the local application's tools, in both Studio and terminal calls. This checkpoint has no return eligibility logic.
 
